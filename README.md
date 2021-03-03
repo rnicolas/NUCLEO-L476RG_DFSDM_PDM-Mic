@@ -16,7 +16,7 @@ This project acquires the PDM (Pulse Density Modulation) microphone signal using
 
 
 ## IDE
-System Workbench for STM32 (SW4STM32) + STM32CubeL4
+STM32CubeIDE
 
 
 ## Microphone used for the test
