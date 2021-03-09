@@ -5534,38 +5534,38 @@ LOAD f:/st/stm32cubeide_1.5.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x0000000000027f17      0x205 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
  .debug_macro   0x000000000002811c      0x1fa Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
 
-.debug_line     0x0000000000000000    0x12824
- .debug_line    0x0000000000000000      0x840 Core/Src/dfsdm.o
- .debug_line    0x0000000000000840      0x6dc Core/Src/dma.o
- .debug_line    0x0000000000000f1c      0x6fa Core/Src/gpio.o
- .debug_line    0x0000000000001616      0xe44 Core/Src/main.o
- .debug_line    0x000000000000245a      0x6e1 Core/Src/stm32l4xx_hal_msp.o
- .debug_line    0x0000000000002b3b      0x7bb Core/Src/stm32l4xx_it.o
- .debug_line    0x00000000000032f6      0x802 Core/Src/syscalls.o
- .debug_line    0x0000000000003af8      0x4f8 Core/Src/sysmem.o
- .debug_line    0x0000000000003ff0      0x791 Core/Src/system_stm32l4xx.o
- .debug_line    0x0000000000004781      0x750 Core/Src/usart.o
- .debug_line    0x0000000000004ed1       0x87 Core/Startup/startup_stm32l476rgtx.o
- .debug_line    0x0000000000004f58      0xad1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
- .debug_line    0x0000000000005a29      0xc77 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
- .debug_line    0x00000000000066a0     0x1e48 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
- .debug_line    0x00000000000084e8      0xcaf Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
- .debug_line    0x0000000000009197      0xb4a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
- .debug_line    0x0000000000009ce1      0xc8c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
- .debug_line    0x000000000000a96d      0xf14 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
- .debug_line    0x000000000000b881     0x1489 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
- .debug_line    0x000000000000cd0a     0x1d61 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
- .debug_line    0x000000000000ea6b      0x36f F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_max_f32.o)
- .debug_line    0x000000000000edda      0x610 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_rfft_fast_init_f32.o)
- .debug_line    0x000000000000f3ea      0x4f8 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_rfft_fast_f32.o)
- .debug_line    0x000000000000f8e2      0xf14 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cfft_f32.o)
- .debug_line    0x00000000000107f6      0x353 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_bitreversal2.o)
- .debug_line    0x0000000000010b49      0x531 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cmplx_mag_f32.o)
- .debug_line    0x000000000001107a      0x2d3 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cos_f32.o)
- .debug_line    0x000000000001134d      0x2dd F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_scale_f32.o)
- .debug_line    0x000000000001162a      0x2e0 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_mult_f32.o)
- .debug_line    0x000000000001190a      0x243 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_common_tables.o)
- .debug_line    0x0000000000011b4d      0xcd7 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cfft_radix8_f32.o)
+.debug_line     0x0000000000000000    0x1282c
+ .debug_line    0x0000000000000000      0x848 Core/Src/dfsdm.o
+ .debug_line    0x0000000000000848      0x6dc Core/Src/dma.o
+ .debug_line    0x0000000000000f24      0x6fa Core/Src/gpio.o
+ .debug_line    0x000000000000161e      0xe44 Core/Src/main.o
+ .debug_line    0x0000000000002462      0x6e1 Core/Src/stm32l4xx_hal_msp.o
+ .debug_line    0x0000000000002b43      0x7bb Core/Src/stm32l4xx_it.o
+ .debug_line    0x00000000000032fe      0x802 Core/Src/syscalls.o
+ .debug_line    0x0000000000003b00      0x4f8 Core/Src/sysmem.o
+ .debug_line    0x0000000000003ff8      0x791 Core/Src/system_stm32l4xx.o
+ .debug_line    0x0000000000004789      0x750 Core/Src/usart.o
+ .debug_line    0x0000000000004ed9       0x87 Core/Startup/startup_stm32l476rgtx.o
+ .debug_line    0x0000000000004f60      0xad1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_line    0x0000000000005a31      0xc77 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_line    0x00000000000066a8     0x1e48 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
+ .debug_line    0x00000000000084f0      0xcaf Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_line    0x000000000000919f      0xb4a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_line    0x0000000000009ce9      0xc8c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_line    0x000000000000a975      0xf14 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_line    0x000000000000b889     0x1489 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
+ .debug_line    0x000000000000cd12     0x1d61 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
+ .debug_line    0x000000000000ea73      0x36f F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_max_f32.o)
+ .debug_line    0x000000000000ede2      0x610 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_rfft_fast_init_f32.o)
+ .debug_line    0x000000000000f3f2      0x4f8 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_rfft_fast_f32.o)
+ .debug_line    0x000000000000f8ea      0xf14 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cfft_f32.o)
+ .debug_line    0x00000000000107fe      0x353 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_bitreversal2.o)
+ .debug_line    0x0000000000010b51      0x531 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cmplx_mag_f32.o)
+ .debug_line    0x0000000000011082      0x2d3 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cos_f32.o)
+ .debug_line    0x0000000000011355      0x2dd F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_scale_f32.o)
+ .debug_line    0x0000000000011632      0x2e0 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_mult_f32.o)
+ .debug_line    0x0000000000011912      0x243 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_line    0x0000000000011b55      0xcd7 F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC\libarm_cortexM4lf_math.a(arm_cfft_radix8_f32.o)
 
 .debug_str      0x0000000000000000    0xf0241
  .debug_str     0x0000000000000000    0xe4685 Core/Src/dfsdm.o
