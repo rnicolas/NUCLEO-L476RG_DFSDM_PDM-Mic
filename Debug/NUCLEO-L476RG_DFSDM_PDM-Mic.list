@@ -27,21 +27,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  000301e0  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001c694  00000000  00000000  00030210  2**0
+ 12 .debug_info   0001c692  00000000  00000000  00030210  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00003d05  00000000  00000000  0004c8a4  2**0
+ 13 .debug_abbrev 00003d05  00000000  00000000  0004c8a2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000e60  00000000  00000000  000505b0  2**3
+ 14 .debug_aranges 00000e60  00000000  00000000  000505a8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000d80  00000000  00000000  00051410  2**3
+ 15 .debug_ranges 00000d80  00000000  00000000  00051408  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00028316  00000000  00000000  00052190  2**0
+ 16 .debug_macro  00028316  00000000  00000000  00052188  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000124ed  00000000  00000000  0007a4a6  2**0
+ 17 .debug_line   000124f7  00000000  00000000  0007a49e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000f01ce  00000000  00000000  0008c993  2**0
+ 18 .debug_str    000f01ce  00000000  00000000  0008c995  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      000000c8  00000000  00000000  0017cb61  2**0
+ 19 .comment      000000c8  00000000  00000000  0017cb63  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00004900  00000000  00000000  0017cc2c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -1871,43 +1871,43 @@ void MX_GPIO_Init(void)
  80012ac:	48000800 	.word	0x48000800
 
 080012b0 <main>:
+
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
-int main(void)
-{
+ * @brief  The application entry point.
+ * @retval int
+ */
+int main(void) {
  80012b0:	e92d 43b0 	stmdb	sp!, {r4, r5, r7, r8, r9, lr}
  80012b4:	b08c      	sub	sp, #48	; 0x30
  80012b6:	af04      	add	r7, sp, #16
-  /* USER CODE END 1 */
+	/* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+	/* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
  80012b8:	f000 fbf6 	bl	8001aa8 <HAL_Init>
-  /* USER CODE BEGIN Init */
+	/* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+	/* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+	/* Configure the system clock */
+	SystemClock_Config();
  80012bc:	f000 f95a 	bl	8001574 <SystemClock_Config>
-  /* USER CODE BEGIN SysInit */
+	/* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+	/* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
  80012c0:	f7ff ff8e 	bl	80011e0 <MX_GPIO_Init>
-  MX_DMA_Init();
+	MX_DMA_Init();
  80012c4:	f7ff ff6e 	bl	80011a4 <MX_DMA_Init>
-  MX_USART2_UART_Init();
+	MX_USART2_UART_Init();
  80012c8:	f000 fb52 	bl	8001970 <MX_USART2_UART_Init>
-  MX_DFSDM1_Init();
+	MX_DFSDM1_Init();
  80012cc:	f7ff fde8 	bl	8000ea0 <MX_DFSDM1_Init>
-  /* USER CODE BEGIN 2 */
+	/* USER CODE BEGIN 2 */
 	printf("\r\n***** Program start! *****\r\n");
  80012d0:	4893      	ldr	r0, [pc, #588]	; (8001520 <main+0x270>)
  80012d2:	f005 fd97 	bl	8006e04 <puts>
@@ -2014,8 +2014,8 @@ int main(void)
  80013ae:	4866      	ldr	r0, [pc, #408]	; (8001548 <main+0x298>)
  80013b0:	f003 fe4e 	bl	8005050 <arm_rfft_fast_init_f32>
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
 	while (1) {
 		// Wait
 		while (flag)
@@ -2024,9 +2024,9 @@ int main(void)
  80013b8:	781b      	ldrb	r3, [r3, #0]
  80013ba:	2b00      	cmp	r3, #0
  80013bc:	d1fb      	bne.n	80013b6 <main+0x106>
+
 		// Raw data output
-		/*for (uint32_t i = 0; i < FFT_SampleNum; i++)
-			printf("%d\r\n", FFT_inp_int32[i]);*/
+		// for (uint32_t i = 0; i < FFT_SampleNum; i++) printf("%d\r\n", FFT_inp_int32[i]);
 
 		// Set input data
 		for (uint32_t i = 0; i < FFT_SampleNum; i++) FFT_inp[i] = (float)FFT_inp_int32[i];
@@ -2235,22 +2235,22 @@ int main(void)
  8001570:	08008f30 	.word	0x08008f30
 
 08001574 <SystemClock_Config>:
+
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
-void SystemClock_Config(void)
-{
+ * @brief System Clock Configuration
+ * @retval None
+ */
+void SystemClock_Config(void) {
  8001574:	b580      	push	{r7, lr}
  8001576:	b0b8      	sub	sp, #224	; 0xe0
  8001578:	af00      	add	r7, sp, #0
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
  800157a:	f107 039c 	add.w	r3, r7, #156	; 0x9c
  800157e:	2244      	movs	r2, #68	; 0x44
  8001580:	2100      	movs	r1, #0
  8001582:	4618      	mov	r0, r3
  8001584:	f004 ff46 	bl	8006414 <memset>
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
  8001588:	f107 0388 	add.w	r3, r7, #136	; 0x88
  800158c:	2200      	movs	r2, #0
  800158e:	601a      	str	r2, [r3, #0]
@@ -2258,77 +2258,74 @@ void SystemClock_Config(void)
  8001592:	609a      	str	r2, [r3, #8]
  8001594:	60da      	str	r2, [r3, #12]
  8001596:	611a      	str	r2, [r3, #16]
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+	RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
  8001598:	463b      	mov	r3, r7
  800159a:	2288      	movs	r2, #136	; 0x88
  800159c:	2100      	movs	r1, #0
  800159e:	4618      	mov	r0, r3
  80015a0:	f004 ff38 	bl	8006414 <memset>
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+	/** Initializes the RCC Oscillators according to the specified parameters
+	 * in the RCC_OscInitTypeDef structure.
+	 */
+	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
  80015a4:	2302      	movs	r3, #2
  80015a6:	f8c7 309c 	str.w	r3, [r7, #156]	; 0x9c
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
  80015aa:	f44f 7380 	mov.w	r3, #256	; 0x100
  80015ae:	f8c7 30a8 	str.w	r3, [r7, #168]	; 0xa8
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
  80015b2:	2310      	movs	r3, #16
  80015b4:	f8c7 30ac 	str.w	r3, [r7, #172]	; 0xac
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
  80015b8:	2302      	movs	r3, #2
  80015ba:	f8c7 30c4 	str.w	r3, [r7, #196]	; 0xc4
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
  80015be:	2302      	movs	r3, #2
  80015c0:	f8c7 30c8 	str.w	r3, [r7, #200]	; 0xc8
-  RCC_OscInitStruct.PLL.PLLM = 2;
+	RCC_OscInitStruct.PLL.PLLM = 2;
  80015c4:	2302      	movs	r3, #2
  80015c6:	f8c7 30cc 	str.w	r3, [r7, #204]	; 0xcc
-  RCC_OscInitStruct.PLL.PLLN = 20;
+	RCC_OscInitStruct.PLL.PLLN = 20;
  80015ca:	2314      	movs	r3, #20
  80015cc:	f8c7 30d0 	str.w	r3, [r7, #208]	; 0xd0
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
+	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
  80015d0:	2307      	movs	r3, #7
  80015d2:	f8c7 30d4 	str.w	r3, [r7, #212]	; 0xd4
-  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
  80015d6:	2302      	movs	r3, #2
  80015d8:	f8c7 30d8 	str.w	r3, [r7, #216]	; 0xd8
-  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
  80015dc:	2302      	movs	r3, #2
  80015de:	f8c7 30dc 	str.w	r3, [r7, #220]	; 0xdc
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) { Error_Handler(); }
  80015e2:	f107 039c 	add.w	r3, r7, #156	; 0x9c
  80015e6:	4618      	mov	r0, r3
  80015e8:	f001 fb6a 	bl	8002cc0 <HAL_RCC_OscConfig>
  80015ec:	4603      	mov	r3, r0
  80015ee:	2b00      	cmp	r3, #0
  80015f0:	d001      	beq.n	80015f6 <SystemClock_Config+0x82>
-  {
-    Error_Handler();
  80015f2:	f000 f883 	bl	80016fc <Error_Handler>
-  }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+	/** Initializes the CPU, AHB and APB buses clocks
+	 */
+	RCC_ClkInitStruct.ClockType =
  80015f6:	230f      	movs	r3, #15
  80015f8:	f8c7 3088 	str.w	r3, [r7, #136]	; 0x88
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+		RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
  80015fc:	2303      	movs	r3, #3
  80015fe:	f8c7 308c 	str.w	r3, [r7, #140]	; 0x8c
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  8001602:	2300      	movs	r3, #0
  8001604:	f8c7 3090 	str.w	r3, [r7, #144]	; 0x90
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
  8001608:	2300      	movs	r3, #0
  800160a:	f8c7 3094 	str.w	r3, [r7, #148]	; 0x94
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
  800160e:	2300      	movs	r3, #0
  8001610:	f8c7 3098 	str.w	r3, [r7, #152]	; 0x98
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK) { Error_Handler(); }
  8001614:	f107 0388 	add.w	r3, r7, #136	; 0x88
  8001618:	2104      	movs	r1, #4
  800161a:	4618      	mov	r0, r3
@@ -2336,42 +2333,35 @@ void SystemClock_Config(void)
  8001620:	4603      	mov	r3, r0
  8001622:	2b00      	cmp	r3, #0
  8001624:	d001      	beq.n	800162a <SystemClock_Config+0xb6>
-  {
-    Error_Handler();
  8001626:	f000 f869 	bl	80016fc <Error_Handler>
-  }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_DFSDM1;
+	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2 | RCC_PERIPHCLK_DFSDM1;
  800162a:	4b0e      	ldr	r3, [pc, #56]	; (8001664 <SystemClock_Config+0xf0>)
  800162c:	603b      	str	r3, [r7, #0]
-  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+	PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
  800162e:	2300      	movs	r3, #0
  8001630:	63fb      	str	r3, [r7, #60]	; 0x3c
-  PeriphClkInit.Dfsdm1ClockSelection = RCC_DFSDM1CLKSOURCE_PCLK;
+	PeriphClkInit.Dfsdm1ClockSelection = RCC_DFSDM1CLKSOURCE_PCLK;
  8001632:	2300      	movs	r3, #0
  8001634:	f8c7 3080 	str.w	r3, [r7, #128]	; 0x80
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+	if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) { Error_Handler(); }
  8001638:	463b      	mov	r3, r7
  800163a:	4618      	mov	r0, r3
  800163c:	f002 f92c 	bl	8003898 <HAL_RCCEx_PeriphCLKConfig>
  8001640:	4603      	mov	r3, r0
  8001642:	2b00      	cmp	r3, #0
  8001644:	d001      	beq.n	800164a <SystemClock_Config+0xd6>
-  {
-    Error_Handler();
  8001646:	f000 f859 	bl	80016fc <Error_Handler>
-  }
-  /** Configure the main internal regulator output voltage
-  */
-  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+	/** Configure the main internal regulator output voltage
+	 */
+	if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK) {
  800164a:	f44f 7000 	mov.w	r0, #512	; 0x200
  800164e:	f001 fae1 	bl	8002c14 <HAL_PWREx_ControlVoltageScaling>
  8001652:	4603      	mov	r3, r0
  8001654:	2b00      	cmp	r3, #0
  8001656:	d001      	beq.n	800165c <SystemClock_Config+0xe8>
-  {
-    Error_Handler();
+		Error_Handler();
  8001658:	f000 f850 	bl	80016fc <Error_Handler>
-  }
+	}
 }
  800165c:	bf00      	nop
  800165e:	37e0      	adds	r7, #224	; 0xe0
@@ -2479,12 +2469,12 @@ int _write(int file, char *ptr, int len) {
  80016f8:	2000f324 	.word	0x2000f324
 
 080016fc <Error_Handler>:
+
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
-void Error_Handler(void)
-{
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
+void Error_Handler(void) {
  80016fc:	b480      	push	{r7}
  80016fe:	af00      	add	r7, sp, #0
   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
@@ -2496,7 +2486,7 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  8001700:	b672      	cpsid	i
 }
  8001702:	bf00      	nop
-  /* USER CODE BEGIN Error_Handler_Debug */
+	/* USER CODE BEGIN Error_Handler_Debug */
 	/* User can add his own implementation to report the HAL error return state */
 	__disable_irq();
 	while (1) {}
