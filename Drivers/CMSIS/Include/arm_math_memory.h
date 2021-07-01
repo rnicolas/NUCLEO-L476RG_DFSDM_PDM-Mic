@@ -2,10 +2,11 @@
  * @file     arm_math_memory.h
  * @brief    Public header file for CMSIS DSP Library
  * @version  V1.9.0
- * @date     20. July 2020
+ * @date     23 April 2021
+ * Target Processor: Cortex-M and Cortex-A cores
  ******************************************************************************/
 /*
- * Copyright (c) 2010-2020 Arm Limited or its affiliates. All rights reserved.
+ * Copyright (c) 2010-2021 Arm Limited or its affiliates. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -183,7 +184,7 @@ __STATIC_FORCEINLINE q31_t read_q7x4_ia (
   memcpy (&val, *pQ7, 4);
 #else
   val =(((*pQ7)[3] & 0x0FF) << 24)  | (((*pQ7)[2] & 0x0FF) << 16)  | (((*pQ7)[1] & 0x0FF) << 8)  | ((*pQ7)[0] & 0x0FF);
-#endif
+#endif 
 
   *pQ7 += 4;
 
@@ -203,7 +204,7 @@ __STATIC_FORCEINLINE q31_t read_q7x4_da (
   memcpy (&val, *pQ7, 4);
 #else
   val = ((((*pQ7)[3]) & 0x0FF) << 24) | ((((*pQ7)[2]) & 0x0FF) << 16)   | ((((*pQ7)[1]) & 0x0FF) << 8)  | ((*pQ7)[0] & 0x0FF);
-#endif
+#endif 
   *pQ7 -= 4;
 
   return (val);

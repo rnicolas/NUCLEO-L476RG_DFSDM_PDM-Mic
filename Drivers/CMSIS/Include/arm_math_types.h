@@ -2,10 +2,11 @@
  * @file     arm_math_types.h
  * @brief    Public header file for CMSIS DSP Library
  * @version  V1.9.0
- * @date     20. July 2020
+ * @date     23 April 2021
+ * Target Processor: Cortex-M and Cortex-A cores
  ******************************************************************************/
 /*
- * Copyright (c) 2010-2020 Arm Limited or its affiliates. All rights reserved.
+ * Copyright (c) 2010-2021 Arm Limited or its affiliates. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -58,7 +59,7 @@ extern "C"
 
 
 /* Included for instrinsics definitions */
-#if defined (_MSC_VER )
+#if defined (_MSC_VER ) 
 #include <stdint.h>
 #define __STATIC_FORCEINLINE static __forceinline
 #define __STATIC_INLINE static __inline
@@ -67,7 +68,7 @@ extern "C"
 #elif defined (__GNUC_PYTHON__)
 #include <stdint.h>
 #define  __ALIGNED(x) __attribute__((aligned(x)))
-#define __STATIC_FORCEINLINE static inline __attribute__((always_inline))
+#define __STATIC_FORCEINLINE static inline __attribute__((always_inline)) 
 #define __STATIC_INLINE static inline
 
 #else
@@ -208,11 +209,11 @@ extern "C"
   #define LOW_OPTIMIZATION_EXIT
   #define IAR_ONLY_LOW_OPTIMIZATION_ENTER
   #define IAR_ONLY_LOW_OPTIMIZATION_EXIT
-
+       
 #elif defined ( _MSC_VER ) || defined(__GNUC_PYTHON__)
       #define LOW_OPTIMIZATION_ENTER
       #define LOW_OPTIMIZATION_EXIT
-      #define IAR_ONLY_LOW_OPTIMIZATION_ENTER
+      #define IAR_ONLY_LOW_OPTIMIZATION_ENTER 
       #define IAR_ONLY_LOW_OPTIMIZATION_EXIT
 #endif
 
@@ -298,12 +299,12 @@ extern "C"
   typedef int32x4_t q31x4_t;
 
   /**
-   * @brief 16-bit fractional 128-bit vector data type with 16-bit alignement in 1.15 format.
+   * @brief 16-bit fractional 128-bit vector data type with 16-bit alignment in 1.15 format.
    */
   typedef __ALIGNED(2) int16x8_t q15x8_t;
 
  /**
-   * @brief 8-bit fractional 128-bit vector data type with 8-bit alignement in 1.7 format.
+   * @brief 8-bit fractional 128-bit vector data type with 8-bit alignment in 1.7 format.
    */
   typedef __ALIGNED(1) int8x16_t q7x16_t;
 

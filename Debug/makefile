@@ -62,7 +62,7 @@ main-build: NUCLEO-L476RG_DFSDM_PDM-Mic.elf secondary-outputs
 
 # Tool invocations
 NUCLEO-L476RG_DFSDM_PDM-Mic.elf: $(OBJS) $(USER_OBJS) F:\Users\roger.nicolas\workspace\stm32cubeide\NUCLEO-L476RG_DFSDM_PDM-Mic\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO-L476RG_DFSDM_PDM-Mic.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\Users\roger.nicolas\workspace\stm32cubeide\NUCLEO-L476RG_DFSDM_PDM-Mic\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-L476RG_DFSDM_PDM-Mic.map" -Wl,--gc-sections -static -Wl,--start-group -larm_cortexM4lf_math -lm -Wl,--end-group -L"F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "NUCLEO-L476RG_DFSDM_PDM-Mic.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\Users\roger.nicolas\workspace\stm32cubeide\NUCLEO-L476RG_DFSDM_PDM-Mic\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-L476RG_DFSDM_PDM-Mic.map" -Wl,--gc-sections -static -Wl,--start-group -lm -larm_cortexM4lf_math -Wl,--end-group -L"F:/Users/roger.nicolas/workspace/stm32cubeide/NUCLEO-L476RG_DFSDM_PDM-Mic/Drivers/CMSIS/Lib/GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
